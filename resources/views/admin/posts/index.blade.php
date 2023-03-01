@@ -19,6 +19,11 @@
 
         </div>
         <div class="col-12">
+            @if(session('message'))
+            <div class="alert alert-success">
+                {{session('message')}}
+            </div>
+            @endif
             <table class="table table-striped">
                 <thead>
                     <th>id</th>
@@ -40,6 +45,12 @@
                             <a href="{{ route('admin.posts.show', $post->slug)}}" title="visualizza dettaglio" class="btn btn-square btn-primary"><i class="fas fa-eye"></i></a>
 
                             <a href="{{ route('admin.posts.edit', $post->slug)}}" title="visualizza dettaglio" class="btn btn-square btn-warning mx-2"><i class="fas fa-edit"></i></a>
+
+                            <form action="{{route('admin.posts.destroy', $post->slug)}}" method="POST">
+                                @csrf 
+                                @method('DELETE')
+                                <button class="btn btn-square btn-danger" type="submit"><i class="fas fa-trash"></i></button>
+                            </form>
                         </td>
                     </tr>
                     @endforeach

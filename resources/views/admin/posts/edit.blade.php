@@ -4,8 +4,14 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-12">
-            <h1>modifica</h1>
+        <div class="col-12 d-flex justify-content-between my-2">
+            <div>
+                <h1>modifica {{$post->title}}</h1>
+
+            </div>
+            <div>
+                    <a href="{{route('admin.posts.index')}}" class="btn btn-primary my-2">torna all'elenco</a>
+                </div>
         </div>
         <div class="col-12">
             
