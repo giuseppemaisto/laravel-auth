@@ -5,7 +5,18 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            elenco
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h1>elenco progetti</h1>
+                </div>
+                <div class="my-2">
+                    <a href="{{ route('admin.posts.create')}}" class="btn btn-primary">aggiungi progetto</a>
+                </div>
+
+            </div>
+            
+
+
         </div>
         <div class="col-12">
             <table class="table table-striped">
@@ -13,7 +24,7 @@
                     <th>id</th>
                     <th>titolo</th>
                     <th>linguaggio</th>
-                    <th>descrizione</th>
+                    
                     <th>slug</th>
                     <th>azioni</th>
                 </thead>
@@ -23,7 +34,7 @@
                         <td>{{$post->id}}</td>
                         <td>{{$post->title}}</td>
                         <td>{{$post->language}}</td>
-                        <td>{{$post->description}}</td>
+                       
                         <td>{{$post->slug}}</td>
                     </tr>
                     @endforeach
