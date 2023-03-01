@@ -36,6 +36,9 @@
                         <td>{{$post->language}}</td>
                        
                         <td>{{$post->slug}}</td>
+                        <td>
+                            <a href="{{ route('admin.posts.show', $post->slug)}}" title="visualizza dettaglio" class="btn btn-primary"><i class="fas fa-eye"></i></a>
+                        </td>
                     </tr>
                     @endforeach
                 </tbody>
