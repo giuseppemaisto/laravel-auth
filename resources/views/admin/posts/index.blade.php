@@ -36,8 +36,10 @@
                         <td>{{$post->language}}</td>
                        
                         <td>{{$post->slug}}</td>
-                        <td>
-                            <a href="{{ route('admin.posts.show', $post->slug)}}" title="visualizza dettaglio" class="btn btn-primary"><i class="fas fa-eye"></i></a>
+                        <td class="d-flex justify-content-between">
+                            <a href="{{ route('admin.posts.show', $post->slug)}}" title="visualizza dettaglio" class="btn btn-square btn-primary"><i class="fas fa-eye"></i></a>
+
+                            <a href="{{ route('admin.posts.edit', $post->slug)}}" title="visualizza dettaglio" class="btn btn-square btn-warning mx-2"><i class="fas fa-edit"></i></a>
                         </td>
                     </tr>
                     @endforeach
